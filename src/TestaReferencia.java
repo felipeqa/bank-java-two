@@ -12,8 +12,15 @@ public class TestaReferencia {
         System.out.println(nome);
         g1.setSalario(5000);
 
-        Funcionario f1 = new Funcionario();
+
+        // criando um gerente com a referencia de um funcionário
+        Funcionario f1 = new Gerente();
         f1.setSalario(2000);
+        // Forcando a referencia a utilizar o timo gerente;
+        boolean x = ((Gerente) f1).autentica(1212);
+        System.out.println("Teste de autenticação " + x);
+
+        System.out.println(f1.getClass());
 
         EditorVideo ev = new EditorVideo();
         ev.setSalario(2500);

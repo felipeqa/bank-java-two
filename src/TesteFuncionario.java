@@ -2,7 +2,10 @@ public class TesteFuncionario {
 
     public static void main(String[] args) {
 
-        Funcionario funcionario = new Funcionario();
+
+        // Instanciando umm Designer usando a referencia de um funcionário
+//        Funcionario funcionario = new Designer();
+        Gerente funcionario = new Gerente();
         funcionario.setNome("Felipe");
         funcionario.setCpf("34334334398");
         funcionario.setSalario(3000);
