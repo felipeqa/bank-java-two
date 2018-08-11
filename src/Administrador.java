@@ -2,7 +2,11 @@
 // extends a classe Funcionario e herda todos os seus atributos e metódos e assina o contrato Autenticavel
 public class Administrador extends Funcionario implements Autenticavel{
 
-    private int senha;
+    private AutenticacaoUtil autenticador;
+
+    public Administrador(){
+        this.autenticador = new AutenticacaoUtil();
+    }
 
     // subreescrever um método é só colocar a mesma assinatura da super classe
         public double getBonificacao(){
@@ -13,15 +17,12 @@ public class Administrador extends Funcionario implements Autenticavel{
 
     @Override
     public boolean autentica(int senha) {
-       if(this.senha == senha){
-           return true;
-       } else {
-           return false;
-       }
+        return this.autenticador.autentica(senha);
     }
 
     @Override
     public void setSenha(int senha) {
-        this.senha = senha;
+        this.autenticador.setSenha(senha);
     }
 }
+
