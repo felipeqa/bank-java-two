@@ -17,8 +17,8 @@ public class TestaReferencia {
         Funcionario f1 = new Gerente();
         f1.setSalario(2000);
         // Forcando a referencia a utilizar o tipo gerente (CAST);
-        boolean x = ((Gerente) f1).autentica(1212);
-        System.out.println("Teste de autenticação " + x);
+//        boolean x = ((Gerente) f1).autentica(1212);
+//        System.out.println("Teste de autenticação " + x);
 
         System.out.println(f1.getClass());
 

@@ -6,10 +6,14 @@ public class TesteSistema {
         Administrador adm = new Administrador();
         adm.setSenha(2221);
 
-        SistemaInterno interno = new SistemaInterno();
-        interno.autentica(gerente);
+        Cliente cliente = new Cliente();
+        cliente.setSenha(2312);
 
+        SistemaInterno interno = new SistemaInterno();
+
+        interno.autentica(gerente);
         interno.autentica(adm);
+        interno.autentica(cliente);
 
 
     }

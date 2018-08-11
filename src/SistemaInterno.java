@@ -2,12 +2,12 @@ public class SistemaInterno {
 
     private int senha = 2222;
 
-    public void autentica(FuncionarioAutenticavel funcionarioAutenticavel){
+    public void autentica(Autenticavel funcionarioAutenticavel){
         boolean autenticou = funcionarioAutenticavel.autentica(this.senha);
         if(autenticou){
             System.out.println("Voce tem acesso ao Sistema Interno!!!");
         } else {
-            System.out.println("Voce não tem acesso ao Sistema interno");
+            System.out.println("Voce NÃO tem acesso ao Sistema interno");
         }
     }
 }
